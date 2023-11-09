@@ -37,19 +37,75 @@ const initApp = () => {
     const div = view.querySelector("div")
     const h2 = div.querySelector("h2")
 
-view.addEventListener("click", (event) => {
-    // event.stopPropagation()
-    view.style.backgroundColor = "purple"
-}, false)
+    /*
+        view.addEventListener("click", (event) => {
+            // event.stopPropagation()
+            view.style.backgroundColor = "purple"
+        }, false)
 
-div.addEventListener("click", (event) => {
-    event.stopPropagation()
+        div.addEventListener("click", (event) => {
+            event.stopPropagation()
 
-    div.style.backgroundColor = "blue"
-}, false)
+            div.style.backgroundColor = "blue"
+        }, false)
 
-h2.addEventListener("click", (event) => {
-    event.stopPropagation()
-    event.target.textContent = "I've changed"
-}, false)
+        h2.addEventListener("click", (event) => {
+            event.stopPropagation()
+            event.target.textContent = "I've changed"
+        }, false)
+    */
+
+/* TOGGLE STYLES
+    view.addEventListener("click", (event) => {
+        // view.classList.add("purple")
+        // view.classList.remove("darkblue")
+        view.classList.toggle("purple")
+        view.classList.toggle("darkblue") // toggle() will switch them 
+    }, false)
+
+    div.addEventListener("click", (event) => {
+        // event.stopPropagation()
+
+        div.classList.toggle("blue")
+        div.classList.toggle("black")
+    }, false)
+
+    h2.addEventListener("click", (event) => {
+        // event.stopPropagation()
+        const myText = event.target.textContent
+        myText === "My 2nd View" 
+        ? event.target.textContent = "I've changed" 
+        : event.target.textContent = "My 2nd View"
+    }, false)
+*/
+
+    view.addEventListener("click", (event) => {
+        // view.classList.add("purple")
+        // view.classList.remove("darkblue")
+        view.classList.toggle("purple")
+        view.classList.toggle("darkblue") // toggle() will switch them 
+    }, false)
+
+    div.addEventListener("click", (event) => {
+        // event.stopPropagation()
+
+        div.classList.toggle("blue")
+        div.classList.toggle("black")
+    }, false)
+
+    h2.addEventListener("click", (event) => {
+        // event.stopPropagation()
+        const myText = event.target.textContent
+        myText === "My 2nd View" 
+        ? event.target.textContent = "I've changed" 
+        : event.target.textContent = "My 2nd View"
+    }, false)
+
+    const nav = document.querySelector("nav")
+    nav.addEventListener("mouseover", (event) => {
+        event.target.classList.add("height100")
+    })
+    nav.addEventListener("mouseout", (evet) => {
+        event.target.classList.remove("height100")
+    })
 }
